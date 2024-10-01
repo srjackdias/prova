@@ -18,23 +18,23 @@ public class PacientesEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name = "id_paciente")
-    private Long id_consulta;
+    private Long id_paciente;
 
     @Column(name = "nome")
     private String nome;
 
     @OneToOne(mappedBy = "paciente")
-    private MedicoEntity medicoEntity;
+    private MedicoEntity medico;
 
     @OneToMany(mappedBy = "paciente")
-    private List<ConsultasEntity> consultasEntities;
+    private List<ConsultasEntity> consultas;
 
-    public Long getId_consulta() {
-        return id_consulta;
+    public Long getId_paciente() {
+        return id_paciente;
     }
 
-    public void setId_consulta(Long id_consulta) {
-        this.id_consulta = id_consulta;
+    public void setId_paciente(Long id_paciente) {
+        this.id_paciente = id_paciente;
     }
 
     public String getNome() {
@@ -45,21 +45,22 @@ public class PacientesEntity {
         this.nome = nome;
     }
 
-    public MedicoEntity getMedicoEntity() {
-        return medicoEntity;
+    public MedicoEntity getMedico() {
+        return medico;
     }
 
-    public void setMedicoEntity(MedicoEntity medicoEntity) {
-        this.medicoEntity = medicoEntity;
+    public void setMedico(MedicoEntity medico) {
+        this.medico = medico;
     }
 
-    public List<ConsultasEntity> getConsultasEntities() {
-        return consultasEntities;
+    public List<ConsultasEntity> getConsultas() {
+        return consultas;
     }
 
-    public void setConsultasEntities(List<ConsultasEntity> consultasEntities) {
-        this.consultasEntities = consultasEntities;
+    public void setConsultas(List<ConsultasEntity> consultas) {
+        this.consultas = consultas;
     }
+
 
 
     

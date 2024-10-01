@@ -1,7 +1,6 @@
 package com.SistemaDeCadastro.cadastro.entities;
 
 import java.util.Date;
-import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -63,10 +62,8 @@ public class ConsultasEntity {
         this.paciente = paciente;
     }
 
-    public static List<ConsultasEntity> findAll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
-    }
+
+ 
 
    
 
