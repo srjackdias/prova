@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 
-@Entity(name ="Medicos")
+@Entity(name ="medico")
 public class MedicoEntity {
 
     @Id
@@ -19,15 +19,15 @@ public class MedicoEntity {
     private Long id_Medico;
 
 
-    @Column(name = "nomemedico")
-    private String nomeMedico;
+    @Column(name = "nome")
+    private String nome;
 
     @Column(name = "especialidade")
     private String especialidade;
 
     
     @OneToOne
-    @JoinColumn(name = "paciente_id")
+    @JoinColumn(name = "id_paciente")
     private PacientesEntity paciente;
 
 
@@ -41,13 +41,13 @@ public class MedicoEntity {
     }
 
 
-    public String getNomeMedico() {
-        return nomeMedico;
+    public String getNome() {
+        return nome;
     }
 
 
-    public void setNomeMedico(String nomeMedico) {
-        this.nomeMedico = nomeMedico;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
 

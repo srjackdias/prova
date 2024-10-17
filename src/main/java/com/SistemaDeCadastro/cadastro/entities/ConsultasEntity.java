@@ -1,6 +1,5 @@
 package com.SistemaDeCadastro.cadastro.entities;
 
-import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -21,13 +20,13 @@ public class ConsultasEntity {
      private Long id_consulta;
 
      @Column(name ="data")
-     private Date  data;
+     private String  data;
 
      @Column(name ="descricao")
      private String descricao;
 
      @ManyToOne
-     @JoinColumn(name = "paciente_id")
+     @JoinColumn(name = "id_paciente")
      private PacientesEntity paciente;
 
     public Long getId_consulta() {
@@ -38,11 +37,11 @@ public class ConsultasEntity {
         this.id_consulta = id_consulta;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 

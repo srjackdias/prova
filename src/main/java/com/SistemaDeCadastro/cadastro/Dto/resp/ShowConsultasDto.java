@@ -1,13 +1,12 @@
 package com.SistemaDeCadastro.cadastro.Dto.resp;
-import java.util.Date;
 
 public class ShowConsultasDto {
-    private Date data;
+    private String data;
     private String descricao;
-    public Date getData() {
+    public String getData() {
         return data;
     }
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
     public String getDescricao() {

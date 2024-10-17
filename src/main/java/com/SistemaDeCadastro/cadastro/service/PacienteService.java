@@ -46,8 +46,9 @@ public class PacienteService {
         pacientesEntity= pacienteRepository.save(pacientesEntity);
 
         MedicoEntity medicoEntity = new MedicoEntity();
-        medicoEntity.setNomeMedico(dto.getMedico().getNomeMedico());
+        medicoEntity.setNome(dto.getMedico().getNome());
         medicoEntity.setEspecialidade(dto.getMedico().getEspecialidade());
+        medicoEntity.setPaciente(pacientesEntity);
 
         medicoEntity= medicoRepository.save(medicoEntity);
 
@@ -97,7 +98,7 @@ public class PacienteService {
 
         }
 
-        medicoDTO.setNomeMedico(paciente.getMedico().getNomeMedico());
+        medicoDTO.setNome(paciente.getMedico().getNome());
         medicoDTO.setEspecialidade(paciente.getMedico().getEspecialidade());
 
      

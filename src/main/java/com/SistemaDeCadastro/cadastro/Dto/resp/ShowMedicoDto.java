@@ -2,13 +2,13 @@ package com.SistemaDeCadastro.cadastro.Dto.resp;
 
 public class ShowMedicoDto {
     
-    private String nomeMedico;
+    private String nome;
     private String especialidade;
-    public String getNomeMedico() {
-        return nomeMedico;
+    public String getNome() {
+        return nome;
     }
-    public void setNomeMedico(String nomeMedico) {
-        this.nomeMedico = nomeMedico;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
     public String getEspecialidade() {
         return especialidade;
@@ -16,7 +16,8 @@ public class ShowMedicoDto {
     public void setEspecialidade(String especialidade) {
         this.especialidade = especialidade;
     }
-
+   
+    
 
     
 }
